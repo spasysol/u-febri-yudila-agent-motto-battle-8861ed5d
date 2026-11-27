@@ -46,7 +46,6 @@ def main() -> None:
     """Validate the motto and leave it where the grader looks."""
     checked = validate(motto())
     DESTINATION.parent.mkdir(parents=True, exist_ok=True)
-    DESTINATION.parent.chmod(0o755)
     DESTINATION.write_text(checked, encoding="utf-8")
     DESTINATION.chmod(0o644)
 
